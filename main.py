@@ -1,6 +1,5 @@
 import requests
 import json
-import os
 
 api_key = os.environ['WEATHER_API_KEY']
 base_url = "http://api.openweathermap.org/data/2.5/weather?"
@@ -17,9 +16,9 @@ if x['cod'] != "404":
     current_humidity = y['humidity']
     z = x['weather']
     weather_description = z[0]['description']
-    print(f"Weather Description : {weather_description}")
-    print(f"Temperature (C) : {current_temperature_celcius}°C")
+    print(f"Weather Description : {weather_description.title()}")
     print(f"Temperature (K) : {current_temperature} K")
+    print(f"Temperature (C) : {current_temperature_celcius}°C")
     print(f"Atmospheric Pressure (hPa) : {current_pressure}")
     print(f"Humidity (%) : {current_humidity}")
 else:
