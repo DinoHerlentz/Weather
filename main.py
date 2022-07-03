@@ -17,8 +17,8 @@ if x['cod'] != "404":
     z = x['weather']
     weather_description = z[0]['description']
     print(f"Weather Description : {weather_description.title()}")
-    print(f"Temperature (K) : {current_temperature} K")
     print(f"Temperature (C) : {current_temperature_celcius}°C")
+    print(f"Temperature (K) : {current_temperature} K")
     print(f"Atmospheric Pressure (hPa) : {current_pressure}")
     print(f"Humidity (%) : {current_humidity}")
 else:
